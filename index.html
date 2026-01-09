@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nombre de la Empresa — Soluciones digitales</title>
+  <meta name="description" content="Nombre de la Empresa — Desarrollo web, diseño y soluciones digitales a medida para tu negocio." />
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="header">
+    <nav class="navbar">
+      <div class="brand">
+        <img src="you logo.png" alt="Logo" class="logo" />
+        <div class="brand-text">
+          <strong>Nombre de la Empresa</strong>
+          <small>Soluciones digitales</small>
+        </div>
+      </div>
+      <button id="menu-toggle" class="menu-toggle" aria-label="Abrir menú">☰</button>
+      <button id="theme-toggle" class="theme-toggle" aria-label="Cambiar tema">
+        <svg id="theme-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <path d="M21 12.79A9 9 0 0111.21 3 7 7 0 1012 21a9 9 0 009-8.21z" fill="currentColor" />
+        </svg>
+      </button>
+      <button id="lang-toggle" class="lang-toggle" aria-label="Cambiar idioma">ES</button>
+      <ul class="nav-links">
+        <li><a href="#about" data-i18n="nav_about">Nosotros</a></li>
+        <li><a href="#services" data-i18n="nav_services">Servicios</a></li>
+        <li><a href="#work" data-i18n="nav_cases">Casos</a></li>
+        <li><a href="#contact" data-i18n="nav_contact">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div class="hero-text">
+      <h1 data-i18n="hero_title">Impulsamos tu presencia digital</h1>
+      <p data-i18n="hero_desc">Diseñamos y desarrollamos soluciones web a medida que ayudan a las empresas a crecer y conectar con sus clientes.</p>
+      <a href="#services" class="btn" data-i18n="btn_services">Nuestros servicios</a>
+      <a href="#contact" class="btn outline" data-i18n="btn_quote">Solicitar presupuesto</a>
+      <button id="run-hello" class="btn" type="button" data-i18n="btn_hello">Ejecutar saludo</button>
+    </div>
+  </section>
+
+  <!-- Contenedor para la escena del saludo (se rellena dinámicamente) -->
+  <div id="hello-scene" aria-hidden="true"></div>
+
+  <section id="about" class="about">
+    <h2 data-i18n="about_title">Sobre Nosotros</h2>
+    <p data-i18n="about_desc">Somos un equipo de diseñadores y desarrolladores con experiencia en crear productos digitales centrados en resultados. Trabajamos con empresas de todos los tamaños para definir, diseñar y entregar experiencias digitales sólidas.</p>
+  </section>
+
+  <section id="services" class="services">
+    <h2 data-i18n="services_title">Servicios</h2>
+    <div class="services-grid">
+      <div class="service-card">
+        <h3 data-i18n="service_web_title">Desarrollo Web</h3>
+        <p data-i18n="service_web_desc">Aplicaciones y sitios web responsivos, optimizados para rendimiento y SEO.</p>
+      </div>
+      <div class="service-card">
+        <h3 data-i18n="service_ui_title">Diseño UX/UI</h3>
+        <p data-i18n="service_ui_desc">Diseños centrados en el usuario que aumentan la conversión y la retención.</p>
+      </div>
+      <div class="service-card">
+        <h3 data-i18n="service_strategy_title">Estrategia Digital</h3>
+        <p data-i18n="service_strategy_desc">Planes adaptados a tus objetivos: posicionamiento, captación de clientes y crecimiento.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="work" class="projects">
+    <h2 data-i18n="work_title">Casos de éxito</h2>
+
+    <div class="highlight-project">
+      <img src="case1.png" alt="Caso 1" />
+      <div class="highlight-info">
+        <h3 data-i18n="work_project_title">Proyecto destacado: Plataforma e-commerce</h3>
+        <p data-i18n="work_project_desc">Desarrollamos una tienda online con mejoras en la velocidad y la conversión, aumentando ventas en un 45%.</p>
+        <ul class="tech-list">
+          <li>React</li><li>Node.js</li><li>Stripe</li>
+        </ul>
+        <a href="#" class="btn" data-i18n="btn_case_study">Ver case study</a>
+      </div>
+    </div>
+
+    <div class="project-grid">
+      <div class="project-card">
+        <h3 data-i18n="work_portal_title">Portal Corporativo</h3>
+        <p data-i18n="work_portal_desc">Rediseño completo y migración de contenido con enfoque accesible.</p>
+      </div>
+
+      <div class="project-card">
+        <h3 data-i18n="work_app_title">App de reservas</h3>
+        <p data-i18n="work_app_desc">Solución móvil para gestionar reservas y pagos en línea.</p>
+      </div>
+
+      <div class="project-card">
+        <h3 data-i18n="work_system_title">Sistema interno</h3>
+        <p data-i18n="work_system_desc">Herramienta de administración y reporting para procesos internos.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="contact">
+    <h2 data-i18n="contact_title">Contacto</h2>
+    <div class="contact-card">
+      <p data-i18n="contact_desc">¿Listo para empezar? Cuéntanos sobre tu proyecto y te responderemos en 24 horas hábiles.</p>
+      <form class="contact-form" action="mailto:contacto@empresa.com" method="post" enctype="text/plain">
+        <input type="text" name="name" placeholder="Nombre" data-i18n="input_name" required />
+        <input type="email" name="email" placeholder="Correo" data-i18n="input_email" required />
+        <textarea name="message" rows="5" placeholder="Mensaje" data-i18n="input_message" required></textarea>
+        <button type="submit" class="contact-btn" data-i18n="btn_send">Enviar mensaje</button>
+      </form>
+      <p class="social-text">
+        <span data-i18n="follow_text">Síguenos en</span> <a href="#" target="_blank">LinkedIn</a> • <a href="#" target="_blank">Twitter</a>
+      </p>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <div data-i18n="footer_copyright">© 2026 Nombre de la Empresa</div>
+      <div data-i18n="footer_info">Av. Ejemplo 123, Ciudad • +34 600 000 000 • <a href="mailto:contacto@empresa.com">contacto@empresa.com</a></div>
+    </div>
+  </footer>
+
+  <script src="hello.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
+
+
+
